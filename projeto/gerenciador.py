@@ -10,7 +10,7 @@ def ver_tarefas(tarefas):
     print("\nLista de tarefas:")
 
     for indice, tarefa in enumerate(tarefas, start=1):
-        status = "✔️" if tarefa["completada"] else " "
+        status = "√" if tarefa["completada"] else " "
         nome_tarefa = tarefa["tarefa"]
         print(f"{indice}. [{status}] {nome_tarefa}")
     return
@@ -33,7 +33,7 @@ def completar_tarefa(tarefas, indice_tarefa):
     except:
         print("Índice de tarefa inválido.")
 
-    print(f"Tarefa {indice_tarefa} marcada como completada")
+    print(f"Tarefa {indice_tarefa + 1} marcada como completada")
     return
 
 
